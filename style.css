@@ -1,0 +1,279 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins", sans-serif;
+}
+:root{
+    --main-color:#fe5b3d;
+    --second-color:#ffac38;
+    --text-color:#444;
+    --gradinet: linear-gradinet(#fe5b3d, #ffac38);
+}
+
+/* Custom Scroll Bar */
+
+html::-webkit-scrollbar{
+   width: 0.5rem;
+}
+html::--webkitscrollbar-track{
+ background: transparent;
+
+}
+html::--webkitscrollbar-thumb{
+ background: var(--main-color);
+ border-radius:5rem;
+
+}
+section{
+    padding: 50px 100px;
+
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #88e6e9;
+    padding: 15px 100px;
+}
+
+.logo img{
+    width: 40px;
+
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-size: 500;
+}
+.navbar a::after{
+    content: '';
+    width: 0;
+    height:3px;
+    background: var(--gradinet);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 24px;
+    cursor:pointer;
+    z-index: 10001;
+    display: none;
+
+}
+.header-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.header-btn .sign-in{
+    background: #474fa0;
+    color:#FFF;
+    border-radius: 0.5rem;
+}
+.header-btn .sign-in:hover{
+    background: var(--main-color);
+
+
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position:relative;
+    background: url(img/6.jpg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    color: aqua;
+}
+.text span {
+    color :var(--main-color);
+}
+.text p{
+    margin: 00.5rem 0 1rem;
+}
+.app.stores{
+    display: flex;
+}
+.app.stores.img{
+    width: 100px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.heading{
+    text-align: center;
+}
+.heading span {
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+.heading h1{
+    font-size: 2rem;
+    color: red;
+}
+
+.heading{
+    text-align: center;
+}
+.heading span {
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+.heading h2{
+    font-size: 2rem;
+    color: red;
+}
+.B2C.img{
+    margin:0px;
+    height:210px;
+    width:100%;
+    border-radius:50%;
+}
+.ss.img{
+    margin:0px;
+    height:210px;
+    width:100%;
+    border-radius:50%;
+}
+.HRD.img{
+    margin:0px;
+    height:210px;
+    width:100%;
+    border-radius:50%;
+}
+.sof.img{
+    margin:0px;
+    height:210px;
+    width:100%;
+    border-radius:50%;
+}
+
+    
+
+.designing.ma.img{
+    width: 100%;
+   align-items:right;
+   margin: 2%;
+width: 20%;
+height: 250px;
+border-radius: 10px;
+cursor:pointer;;
+}
+
+.text{
+    height: 30px;
+    width:300px;
+    padding: 7px;
+}
+.email.number{
+    
+    height: 25px;
+    width:350px;
+    padding: 7px;
+}
+
+/* making responsive*/
+@media(max-width:991px){
+    header{
+        padding:18px 40px;
+    }
+    section{
+        padding:50px 40px;
+            
+        }
+}
+@media(max-width:881px){
+    .home{
+        background-position: left;
+    }
+    .form-container form{
+        bottom:0.2rem;
+        left:40px;
+    }
+}
+@media (max-width:768px){
+    header{
+        padding:11px 40px;
+    }#menu-con{
+        display: initial;
+    }
+}
+.signup{
+    display: none;
+}
+.home{
+    grid-template-columns: 1fr;
+}
+
+header.navbar{
+position: absolute;
+top: -500px;
+left:0;
+right:0;
+display: flex;
+flex-direction: column;
+background: #88e6e9;
+box-shadow: 0 4px 4px rgba(0, 0, 0,0.1);
+transition: 0.2s ease;
+text-align: left;
+}
+.navbar.active{
+    top:100%;
+}
+.navbar a{
+    padding: 1rem;
+    border-left: 2px solid var(--main-color);
+    margin: 1rem;
+    display: block;
+}
+.navbar :hover{
+    color:#88e6e9;
+    background: var(--main-color);
+    border: none;
+}
+.navbar a::after{
+    display: none;
+}
+
+.heading span{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.heading h1{
+    font: size 1.3rem;
+
+    
+}
